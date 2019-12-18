@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: `SSU Education and Public Outreach`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
   },
@@ -15,6 +15,20 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-source-wordpress`,
+      options: {
+        // your WordPress source
+        baseUrl: `epo.sonoma.edu/dev`,
+        protocol: `https`,
+        // is it hosted on wordpress.com, or self-hosted?
+
+        // does your site use the Advanced Custom Fields Plugin?
+        useACF: false,
+        hostingWPCOM: false,
+
+      }
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

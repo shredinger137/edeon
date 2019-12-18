@@ -1,0 +1,121 @@
+html {
+	width: 99vw;
+}
+
+
+body {
+	-webkit-font-smoothing: antialiased;
+	margin: 0;
+	background-color: black;
+	font-size: 1rem;
+	font-family: sans-serif;
+	line-height: 1.6;
+	color: white;
+	background-image: url("../images/bg1.jpg");
+	background-size: 100% 100%;
+	background-attachment: fixed;
+
+}
+
+
+
+.contentReal {
+	background: rgba(121, 112, 112, 0.4);
+	backdrop-filter: blur(4px);
+}
+
+.page-entry {
+	margin-top: 135px;
+	z-index: 99;
+}
+
+
+@font-face {
+    font-family: 'Bebas';
+    src: url('./Bebas-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+a {
+	color: #1a8fe8;
+	text-decoration: none;
+	display: block;
+}
+
+nav {
+	font-family: Bebas;
+	width: 60vw;
+	text-align: center;
+	font-size: 1.4em;
+	z-index: 5;
+	text-align: right;
+}
+
+nav ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		float: right;
+}
+
+.sub-menu {
+	display: none;
+	position: absolute;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 5;
+	line-height: 0.8;
+	font-size: 1.2em;
+}
+
+.sub-menu .dropdown-item {
+	float: none;	
+	padding: 0 auto;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+	background: black;
+	color: white;
+  }
+
+nav li {
+	float: left;
+	padding: 14px 16px;
+	display: block;
+}
+
+nav li li a {
+	display: block;
+	color: white;
+	text-align: right;
+
+	text-decoration: none;
+  }
+
+  .nav-item:hover .sub-menu { 
+	display: block;
+  }
+
+#navbtn {
+	display: none;
+	position: absolute;
+	top: 12px;
+	left: 80%;
+}
+
+  @media only screen and (max-width: 700px) {
+	.cornerimage {
+		display: none;
+	}
+
+	#navbtn {
+		display: block;
+	}
+
+	#navbar {
+		display: none;
+	}
+
+	}

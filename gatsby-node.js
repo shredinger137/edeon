@@ -1,7 +1,72 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+const path = require(`path`)
+const slash = require(`slash`)
 
-// You can delete this file if you're not using it
+// Implement the Gatsby API “createPages”. This is
+// called after the Gatsby bootstrap is finished so you have
+// access to any information necessary to programmatically
+// create pages.
+// Will create pages for WordPress posts (route : /blog/{slug})
+// Will create pages for WordPress projects (route : /projects/{slug})
+exports.createPages = async ({ graphql, actions }) => {
+  const { createPage } = actions
+  const pages = await graphql(`
+    {
+      allWordpressPage {
+        edges {
+          node {
+            id
+            slug
+          }
+        }
+      }
+
+    }
+  `)
+
+  const projects = await graphql(`
+  {
+    allWordpressWpProject {
+      edges {
+        node {
+          id
+          slug
+        }
+      }
+    }
+  }
+  `)
+
+
+  // Check for any errors
+  if (pages.errors) {
+    throw new Error(pages.errors)
+  }
+
+  // Access query postss via object destructuring
+  const { allWordpressPage } = pages.data
+  const { allWordpressWpProject } = projects.data
+
+  const pageTemplate = path.resolve(`./src/templates/single-page.js`)
+
+  allWordpressWpProject.edges.forEach(edge => {
+    createPage({
+      path: `/project/${edge.node.slug}`,
+      component: slash(pageTemplate),
+      context: {
+        id: edge.node.id,
+        postId: edge.node.wordpress_id,
+      },
+    })
+  })
+
+  allWordpressPage.edges.forEach(edge => {
+    createPage({
+      path: `${edge.node.slug}`,
+      component: slash(pageTemplate),
+      context: {
+        id: edge.node.id,
+        postId: edge.node.wordpress_id,
+      },
+    })
+  })
+}

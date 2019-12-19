@@ -49,19 +49,20 @@ exports.createPages = async ({ graphql, actions }) => {
   const { allWordpressWpProject } = projects.data
 
   const pageTemplate = path.resolve(`./src/templates/single-page.js`)
+  const projectTemplate = path.resolve('./src/templates/single-project.js')
 
- /* 
+ 
   allWordpressWpProject.edges.forEach(edge => {
     createPage({
-      path: `/project/${edge.node.slug}`,
-      component: slash(pageTemplate),
+      path: `${edge.node.slug}`,
+      component: slash(projectTemplate),
       context: {
         id: edge.node.id,
         postId: edge.node.wordpress_id,
       },
     })
   })
-  */
+  
 
   allWordpressPage.edges.forEach(edge => {
     createPage({

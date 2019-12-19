@@ -25,9 +25,17 @@ module.exports = {
         // is it hosted on wordpress.com, or self-hosted?
 
         // does your site use the Advanced Custom Fields Plugin?
-        useACF: false,
+        useACF: true,
         hostingWPCOM: false,
 
+      }
+    },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /css/
+        }
       }
     },
     {

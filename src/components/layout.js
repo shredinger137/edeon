@@ -24,14 +24,7 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata.title} />
       <img src={require('../images/corner_planet.png')} className="cornerPlanet"></img>
       
-      <div className="contentReal"
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0px 1.0875rem 1.45rem`,
-          paddingTop: 0,
-        }}
-      >
+      <div className="contentReal" >
         <main>{children}</main>
         
       </div>

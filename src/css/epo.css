@@ -1,3 +1,16 @@
+/*
+Z-Index Reference:
+Background: 1
+Content Div: 2
+Content Elements: 3
+Nav Bar (div): 4
+Planet: 5
+
+*/
+
+
+
+
 html {
 	width: 99vw;
 }
@@ -20,8 +33,13 @@ body {
 
 
 .contentReal {
-	background: rgba(121, 112, 112, 0.4);
-	backdrop-filter: blur(4px);
+	background: rgba(0, 0, 0, 0.6);
+	backdrop-filter: blur(5px);
+	margin: 0 auto;
+	width: 76vw;
+	min-height: 60vh;
+	box-shadow: 5px 5px rgba(0, 0, 0, 0.65);
+	border-radius: 15px;
 }
 
 .contentReal div {
@@ -30,7 +48,8 @@ body {
 
 .page-entry {
 	margin-top: 135px;
-	z-index: 99;
+	z-index: 2;
+	width: 75vw;
 }
 
 
@@ -66,17 +85,24 @@ nav {
 	font-family: Bebas;
 	width: 60vw;
 	text-align: center;
-	font-size: 1.5rem;
-	z-index: 5;
-	text-align: right;
+	font-size: 1.4rem;
+
 }
 
+
 nav ul {
-		list-style-type: none;
-		margin: 0;
-		padding: 0;
-		overflow: hidden;
-		float: right;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+.navwrapper {
+	position: fixed;
+	top: 1%;
+	left: 50%;
+	/* bring your own prefixes */
+	transform: translate(-50%);
 }
 
 .sub-menu {
@@ -84,7 +110,6 @@ nav ul {
 	position: absolute;
 	min-width: 160px;
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-	z-index: 5;
 	line-height: 1;
 	font-size: 1.4rem;
 }
@@ -103,10 +128,12 @@ nav ul {
 	color: #1a8fe8;
 }
 
+
 nav li {
 	float: left;
 	padding: 14px 16px;
 	display: block;
+	z-index: 6;
 }
 
 nav li li a {
@@ -114,6 +141,7 @@ nav li li a {
 	color: white;
 	text-align: right;
 	text-decoration: none;
+	z-index: 6;
   }
 
   .nav-item:hover .sub-menu { 
@@ -126,6 +154,16 @@ nav li li a {
 	top: 12px;
 	left: 80%;
 }
+
+
+@media only screen and (max-width: 1200px) {
+	.nav {
+		font-size: 1rem;
+	}
+
+
+}
+
 
   @media only screen and (max-width: 750px) {
 	.cornerPlanet {

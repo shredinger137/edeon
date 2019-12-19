@@ -1,5 +1,6 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
+import { Link } from "gatsby"
 
 export default () => (
   <StaticQuery
@@ -28,10 +29,10 @@ export default () => (
       }
     `}
     render={data => {
-      console.log(data.allWordpressWpApiMenusMenusItems.edges[0].node.items);
       return (
         
         <nav className="main-navigation">
+          <div className="navwrapper">
           <ul className="nav menu">
             {data &&
               data.allWordpressWpApiMenusMenusItems &&
@@ -43,19 +44,16 @@ export default () => (
                 prop => {
                   return (
                     <li className="nav-item">
-                      <a
+                      <Link to={"/" + prop.object_slug + "/"}
                         className="nav-link active"
-                        href={"/" + prop.object_slug}
                         alt={prop.title}
                       >
                         {prop.title}
-                      </a>
+                      </Link>
                       <div className="sub-menu">
                         {prop &&
                           prop.wordpress_children &&
                           prop.wordpress_children.map(child => {
-                            console.log("child ", child)
-
                             return (
                               <a
                                 className="dropdown-item"
@@ -72,6 +70,7 @@ export default () => (
                 }
               )}
           </ul>
+          </div>
         </nav>
       )
     }}

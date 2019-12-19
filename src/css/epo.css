@@ -24,6 +24,10 @@ body {
 	backdrop-filter: blur(4px);
 }
 
+.contentReal div {
+	padding: 20px;
+}
+
 .page-entry {
 	margin-top: 135px;
 	z-index: 99;
@@ -33,6 +37,21 @@ body {
 @font-face {
     font-family: 'Bebas';
     src: url('./Bebas-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Eurostile';
+    src: url('./EurostileExtended.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nidus';
+    src: url('./nidsans-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -47,7 +66,7 @@ nav {
 	font-family: Bebas;
 	width: 60vw;
 	text-align: center;
-	font-size: 1.4em;
+	font-size: 1.5rem;
 	z-index: 5;
 	text-align: right;
 }
@@ -66,8 +85,8 @@ nav ul {
 	min-width: 160px;
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 	z-index: 5;
-	line-height: 0.8;
-	font-size: 1.2em;
+	line-height: 1;
+	font-size: 1.4rem;
 }
 
 .sub-menu .dropdown-item {
@@ -80,6 +99,10 @@ nav ul {
 	color: white;
   }
 
+.dropdown-item:hover {
+	color: #1a8fe8;
+}
+
 nav li {
 	float: left;
 	padding: 14px 16px;
@@ -90,7 +113,6 @@ nav li li a {
 	display: block;
 	color: white;
 	text-align: right;
-
 	text-decoration: none;
   }
 
@@ -105,8 +127,12 @@ nav li li a {
 	left: 80%;
 }
 
-  @media only screen and (max-width: 700px) {
-	.cornerimage {
+  @media only screen and (max-width: 750px) {
+	.cornerPlanet {
+		display: none;
+	}
+
+	.main-navigation {	
 		display: none;
 	}
 

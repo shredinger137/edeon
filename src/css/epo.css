@@ -10,7 +10,6 @@ Planet: 5
 
 
 
-
 html {
 	width: 99vw;
 }
@@ -40,10 +39,13 @@ body {
 	min-height: 60vh;
 	box-shadow: 5px 5px rgba(0, 0, 0, 0.65);
 	border-radius: 15px;
+	font-family: 'Roboto', sans-serif;
+
 }
 
 .contentReal div {
 	padding: 20px;
+
 }
 
 .page-entry {
@@ -67,6 +69,15 @@ body {
     font-weight: normal;
     font-style: normal;
 }
+
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('./roboto/Roboto-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 
 @font-face {
     font-family: 'Nidus';

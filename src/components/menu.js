@@ -44,7 +44,7 @@ export default () => (
                 prop => {
                   return (
                     <li className="nav-item">
-                      <Link to={"/" + prop.object_slug + "/"}
+                      <Link to={prop.object_slug}
                         className="nav-link active"
                         alt={prop.title}
                       >

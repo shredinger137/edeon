@@ -13,7 +13,7 @@ import Circle from '../css/testcircle.svg'
 class Homepage extends Component {
   clicked(area){
     console.log(area.name);
-    window.location.href = withPrefix('/' + area.name);
+    window.location.href = withPrefix(area.name);
   }
 
   

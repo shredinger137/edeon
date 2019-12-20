@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
+import "../css/epo.css"
 
 export const ProjectTemplate = ({ title, content }) => {
   return (

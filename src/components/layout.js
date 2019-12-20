@@ -4,7 +4,6 @@ import { useStaticQuery, graphql } from "gatsby"
 import SEO from "./seo"
 
 import Header from "./header"
-import "./layout.css"
 import Menu from "./menu"
 
 const Layout = ({ children }) => {

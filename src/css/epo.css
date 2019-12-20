@@ -21,7 +21,6 @@ html {
 body {
 	-webkit-font-smoothing: antialiased;
 	margin: 0;
-	background-color: black;
 	font-size: 1rem;
 	font-family: sans-serif;
 	line-height: 1.6;
@@ -32,6 +31,51 @@ body {
 	max-width: 100vw;
 
 }
+
+.cornerPlanet {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 500px;
+	z-index: 4;
+	pointer-events: none;
+} 
+
+
+.site-header {
+	position: sticky;
+	top: 0;
+	min-height: 10vh;
+	max-width: 100vw;
+	margin: 0 auto;
+	color: #041A31;
+	background-color: rgba(4,26,49,.8);
+	padding: 0;
+	display: sticky;
+	align-items: center;
+	justify-content: flex-end;
+	z-index: 4;
+	border-bottom-left-radius:40%;
+    border-bottom-right-radius:40%;
+}
+
+/******** Text *******/
+/*********************/
+h1, h2, h3, h4, h5, p {
+
+  color: white;
+
+}
+
+a {
+	color: #3BA9FC;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #F7C243;
+}
+
 
 
 

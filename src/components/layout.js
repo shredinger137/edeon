@@ -1,8 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import Image from "../components/image"
-
+import SEO from "./seo"
 
 import Header from "./header"
 import "./layout.css"
@@ -22,6 +21,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
+      <SEO title="EdEon"></SEO>
       <img src={require('../images/corner_planet.png')} className="cornerPlanet"></img>
       
       <div className="contentReal" >

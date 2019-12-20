@@ -28,7 +28,7 @@ const Page = ({ data }) => {
   const { wordpressPage: page } = data
 
   return (
-    <Layout>
+    <Layout pageTitle={page.title}>
       <PageTemplate title={page.title} content={page.content.replace(`<img src="/`, `<img src="https://epo.sonoma.edu/`)} />
     </Layout>
   )

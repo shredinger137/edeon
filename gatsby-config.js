@@ -1,9 +1,9 @@
 module.exports = {
   pathPrefix: `/gatsby`,
   siteMetadata: {
-    title: `SSU Education and Public Outreach`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `EdEon`,
+    description: `Education and public outreach at Sonoma State University.`,
+    author: `@shredinger137`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

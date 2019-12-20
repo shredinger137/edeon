@@ -9,7 +9,9 @@ class Projects extends Component {
 
     return (
       <>
-        <Layout />
+        <Layout>
+        <div></div>
+        </Layout>
         
       </>
 

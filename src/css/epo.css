@@ -14,6 +14,9 @@ html {
 	width: 99vw;
 }
 
+.main-navigation {
+	width: 100vw;
+}
 
 body {
 	-webkit-font-smoothing: antialiased;
@@ -26,6 +29,7 @@ body {
 	background-image: url("../images/bg1.jpg");
 	background-size: 100% 100%;
 	background-attachment: fixed;
+	max-width: 100vw;
 
 }
 
@@ -45,6 +49,7 @@ body {
 
 .contentReal div {
 	padding: 20px;
+	max-width: 100vw;
 
 }
 
@@ -181,7 +186,7 @@ nav li li a {
 		display: none;
 	}
 
-	.main-navigation {	
+	.menu {	
 		display: none;
 	}
 
@@ -189,8 +194,37 @@ nav li li a {
 		display: block;
 	}
 
-	#navbar {
-		display: none;
+	.bar1, .bar2, .bar3 {
+		width: 35px;
+		height: 5px;
+		background-color: white;
+		margin: 6px 0;
+		transition: 0.4s;
+	  }
+
+	  .menubutton {
+		display: inline-block;
+		cursor: pointer;
+		position: fixed;
+		left: 50%;
+		transform: translate(-50%);
+		
+}
+	.menuExpanded
+	{
+		display: block;
 	}
+	  
+	  .change .bar1 {
+		-webkit-transform: rotate(-45deg) translate(-9px, 6px);
+		transform: rotate(-45deg) translate(-9px, 6px);
+	  }
+	  
+	  .change .bar2 {opacity: 0;}
+	  
+	  .change .bar3 {
+		-webkit-transform: rotate(45deg) translate(-8px, -8px);
+		transform: rotate(45deg) translate(-8px, -8px);
+	  }
 
 	}

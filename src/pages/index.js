@@ -4,7 +4,6 @@ import '../css/index.css'
 import splash from '../images/splashimage.png'
 import ImageMapper from 'react-image-mapper';
 import { withPrefix } from "gatsby";
-import '../css/solarsystem.css'
 import Circle from '../css/testcircle.svg'
 
 //<div className="svg-wrapper"><Circle /></div> In case we go back to it

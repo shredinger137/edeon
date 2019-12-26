@@ -29,7 +29,7 @@ const Page = ({ data }) => {
 
   return (
     <Layout pageTitle={page.title}>
-      <PageTemplate title={page.title} content={page.content.replace(`<img src="/`, `<img src="https://epo.sonoma.edu/`)} />
+      <PageTemplate title={page.title} content={page.content.replace(/<img src="\//g, `<img src="https://epo.sonoma.edu/`)} />
     </Layout>
   )
 }

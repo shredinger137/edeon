@@ -27,7 +27,6 @@ body {
 	color: white;
 	background-image: url("../images/bg1.jpg");
 	background-size: 100% 100%;
-	background-attachment: fixed;
 	max-width: 100vw;
 
 
@@ -253,7 +252,11 @@ nav li li a {
 
 }
 
+@media only screen and (min-width: 750px) {
+body {
+	background-attachment: fixed; }
 
+}
   @media only screen and (max-width: 750px) {
 	.cornerPlanet {
 		display: none;

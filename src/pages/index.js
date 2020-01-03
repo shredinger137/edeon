@@ -22,7 +22,7 @@ class Homepage extends Component {
     var areas_map = {
       name: "my-map",
       areas: [
-        { name: "projects", shape: "poly", 
+        { name: "projects-landing", shape: "poly", 
           coords: [221,134,245,21,270,26,289,32,308,40,328,54,349,69,380,101,385,110,278,136,252,144,238,139], fillColor: fillcolor  },
         { name: "multimedia", shape: "poly", 
           coords: [259,149,388,118,415,201,412,234,400,286,299,227,291,196,283,169],  fillColor: fillcolor },

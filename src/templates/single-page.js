@@ -29,7 +29,6 @@ const Page = ({ data }) => {
 
   return (
     <Layout pageTitle={page.title}>
-      <div className="bg"></div>
       <PageTemplate title={page.title} content={page.content.replace(/<img src="\//g, `<img src="https://epo.sonoma.edu/`)} />
     </Layout>
   )

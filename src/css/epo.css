@@ -22,7 +22,7 @@ html {
 body {
 	-webkit-font-smoothing: antialiased;
 	margin: 0;
-	font-size: 1rem;
+	font-size: 1.1rem;
 	font-family: 'Roboto', sans-serif;
 	line-height: 1.6;
 	color: white;
@@ -46,7 +46,7 @@ body {
 
 /*Projects Grid*/
 
-.projectsWrapper{
+.projectsWrapper, .grid-3 {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-gap: 15px;
@@ -89,6 +89,13 @@ h1, h2, h3, h4, h5, p {
 
 }
 
+center {
+	margin: auto;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 a {
 	color: #3BA9FC;
 	text-decoration: none;
@@ -99,7 +106,18 @@ a:hover {
 }
 
 
+table {
+	height: auto;
+	border: 1;
+	width: auto;
+	display: block;
+}
 
+
+
+.max-90 {
+	max-width: 90vw;
+}
 
 .contentReal {
 	background: rgba(0, 0, 0, 0.6);
@@ -112,7 +130,7 @@ a:hover {
 	0 0 8px 7px rgba(128, 200, 255, 0.21); /* middle magenta */
 	border-radius: 15px;
 	padding-left: calc((100vw - 100%) + 5px);
-
+	margin-top: 10px;
 }
 
 .contentReal div {
@@ -127,6 +145,15 @@ a:hover {
 	width: 75vw;
 	margin-bottom: 15px;
 	
+}
+
+
+.w-50 {
+	width: 50%;
+}
+
+.hide-mobile {
+	display: block;
 }
 
 
@@ -370,6 +397,14 @@ nav li {
 	font-size: 2rem;
 }
 
+.w-90-xs {
+	width: 75%;
+}
+
+.hide-mobile {
+	display: none;
+}
+
 nav li li a {
 	display: block;
 	color: white;
@@ -390,10 +425,11 @@ nav li li a {
 }
 
 
-.projectsWrapper{
+.projectsWrapper, .grid-1-xs {
 	grid-template-columns: 1fr;
 }
 .page-entry {
 	margin-top: 15px; }
+
 
 	}

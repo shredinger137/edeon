@@ -41,6 +41,10 @@ body {
 	pointer-events: none;
 } 
 
+.mobile-only {
+	display: none;
+}
+
 
   
 
@@ -128,7 +132,7 @@ a:hover {
 }
 
 
-table {
+.DECPRECATEDtable {
 	height: auto;
 	border: 1;
 	width: auto;
@@ -242,6 +246,13 @@ nav ul {
 	padding-left: calc((100vw - 100%) + 5px);
 }
 
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+}
+
 .sub-menu {
 	display: none;
 	position: absolute;
@@ -292,8 +303,63 @@ nav li li a {
 	left: 80%;
 }
 
+.our-team {
+	margin-left: auto;
+	margin-right: auto;
+	background-color: blue;
+}
+
+.contact-list {
+	margin-left:auto; 
+	margin-right:auto;
+	padding-bottom: 15px;
+}
+
+
+
+.contact-list .name {
+	font-weight: bold;
+}
+
+.contact-list .title {
+	font-size: .9em;
+}
+
+
+.contact-list td, th {
+	vertical-align: top;
+	text-align: left;
+	padding-right: 15px;
+	padding-left: 15px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+}
+
+.contact-list tr:nth-child(even) {
+	background-color: rgba(255, 255, 255, .2);
+}
+
+.contact-list tr:nth-child(odd) {
+	background-color: rgba(255, 255, 255, .1);
+}
+
+.contact-list td p {
+	margin:0 0 .1rem 0
+}
+
+.contact-list th {
+	text-align: center;
+	background-color: rgba(0, 0, 0, .3);
+}
+
+.contentReal div {
+	padding: 0;
+}
+
 
 @media only screen and (max-width: 1200px) {
+
+
 	.nav {
 		font-size: 1rem;
 	}
@@ -301,8 +367,19 @@ nav li li a {
 
 }
 
-
   @media only screen and (max-width: 750px) {
+
+	.contact-list {
+		width: 90vw;
+	}
+
+	.contact-list td, th, tr {
+		padding-right: 4px;
+		padding-left: 4px;
+		padding-bottom: 5px;
+		padding-top: 0;
+	}
+
 	.cornerPlanet {
 		display: none;
 	}
@@ -349,7 +426,7 @@ nav li li a {
 	  }
 
 	  .contentReal {
-		width: 88vw;
+		width: 92vw;
 	  }
 
 	  .page-entry {
@@ -427,6 +504,10 @@ nav li {
 	display: none;
 }
 
+.mobile-only {
+	display: block;
+}
+
 nav li li a {
 	display: block;
 	color: white;
@@ -455,3 +536,4 @@ nav li li a {
 
 
 	}
+

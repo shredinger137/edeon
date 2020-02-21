@@ -1,5 +1,4 @@
 import React, { Component } from "react"
-
 import '../css/index.css'
 import splash from '../images/splashimage.png'
 import ImageMapper from 'react-image-mapper';
@@ -10,28 +9,39 @@ import logo from '../images/logo_with_text.png';
 
 
 class Homepage extends Component {
+  constructor(){
+    super();
+  }
+  state = {
+    width: 550
+  }
+
   clicked(area){
     console.log(area.name);
     window.location.href = withPrefix(area.name);
   }
 
-  
-  render() {
+  componentDidMount(){
     var width = 500;
-    if(window && window.innerWidth){
-      if(window.innerWidth <= 1000){
-        width = window.innerWidth / 1.5; 
+    if(window && typeof window != undefined && window.width){
+      if(window.width <= 1000){
+       width = window.width / 2 
       }
-      if(window.innerWidth <= 800){
-        width = window.innerWidth / 1.2;
-      } else {
-        width = window.innerWidth / 3;
+      if(window.width <= 800){
+        width = window.width / 1.5
+      } else{
+        width = window.width / 4
       }
+      this.setState({width: width});
+
     }
 
+  }
 
-    console.log(width);
-    const fillcolor = "rgba(58,27,1,0.25)";
+
+  
+  render() {
+     const fillcolor = "rgba(58,27,1,0.25)";
     const data = this.props.data
     var areas_map = {
       name: "my-map",
@@ -55,7 +65,7 @@ class Homepage extends Component {
       
         </div>
         <div className="image-map-container">
-        <ImageMapper width={width} imgWidth={908} src={logo} map={areas_map} onClick={area => this.clicked(area)}/>
+        <ImageMapper width={this.state.width} imgWidth={908} src={logo} map={areas_map} onClick={area => this.clicked(area)}/>
         <div className="map-selector"></div>
       </div>
         

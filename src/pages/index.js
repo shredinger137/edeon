@@ -44,7 +44,7 @@ class Homepage extends Component {
     var areas_map = {
       name: "my-map",
       areas: [
-        { name: "projects-landing", shape: "poly", 
+        { name: "projects", shape: "poly", 
           coords: [481,143,512,44,539,49,594,71,630,85,680,109,719,136,764,168,785,189,701,253,663,221,626,198,574,174,512,152], fillColor: fillcolor  },
         { name: "multimedia", shape: "poly", 
           coords: [732,289,859,255,867,279,881,319,892,356,902,451,905,559,801,567,802,542,802,473,789,412,776,362,757,322],  fillColor: fillcolor },

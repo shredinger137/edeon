@@ -23,13 +23,13 @@ class Homepage extends Component {
   componentDidMount(){
     var width = 500;
     if(window && typeof window != undefined && window.innerWidth){
-      if(window.width <= 1000){
+      if(window.innerWidth <= 1000){
        width = window.innerWidth / 2 
       }
-      if(window.width <= 800){
-        width = window.innerWidth / 1.5
+      if(window.innerWidth <= 800){
+        width = window.innerWidth / 1.2
       } else{
-        width = window.innerWidth / 4
+        width = window.innerWidth / 3
       }
       this.setState({width: width});
 
@@ -41,7 +41,6 @@ class Homepage extends Component {
   
   render() {
      const fillcolor = "rgba(58,27,1,0.25)";
-    const data = this.props.data
     var areas_map = {
       name: "my-map",
       areas: [

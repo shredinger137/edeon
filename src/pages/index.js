@@ -17,13 +17,19 @@ class Homepage extends Component {
 
   
   render() {
-    var width = window.innerWidth / 3;
-    if(window.innerWidth <= 1000){
-      width = window.innerWidth / 1.5; 
+    var width = 500;
+    if(window && window.innerWidth){
+      if(window.innerWidth <= 1000){
+        width = window.innerWidth / 1.5; 
+      }
+      if(window.innerWidth <= 800){
+        width = window.innerWidth / 1.2;
+      } else {
+        width = window.innerWidth / 3;
+      }
     }
-    if(window.innerWidth <= 800){
-      width = window.innerWidth / 1.2;
-    }
+
+
     console.log(width);
     const fillcolor = "rgba(58,27,1,0.25)";
     const data = this.props.data

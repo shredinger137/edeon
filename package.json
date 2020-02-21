@@ -17,6 +17,7 @@
     "gatsby-source-wordpress": "^3.1.44",
     "gatsby-transformer-sharp": "^2.2.23",
     "gatsby-wordpress-inline-images": "^1.2.0",
+    "image-map": "^1.1.7",
     "jquery": "^3.4.1",
     "maphilight": "^1.4.0",
     "prop-types": "^15.7.2",

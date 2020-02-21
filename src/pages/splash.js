@@ -1,20 +1,14 @@
 import React, { Component } from "react"
 
-import '../css/index.css'
 import splash from '../images/splashimage.png'
 import ImageMapper from 'react-image-mapper';
 import { withPrefix } from "gatsby";
-import logo from '../images/logo_with_text.png';
-
-//<div className="svg-wrapper"><Circle /></div> In case we go back to it
+import logo from '../images/logo_with_text.png'
 
 
-class Homepage extends Component {
-  clicked(area){
-    console.log(area.name);
-    window.location.href = withPrefix(area.name);
-  }
 
+
+class Splash extends Component {
   
   render() {
     var width = window.innerWidth / 3;
@@ -25,7 +19,7 @@ class Homepage extends Component {
       width = window.innerWidth / 1.2;
     }
     console.log(width);
-    const fillcolor = "rgba(58,27,1,0.25)";
+    const fillcolor = "rgba(58,27,1,0.2)";
     const data = this.props.data
     var areas_map = {
       name: "my-map",
@@ -58,4 +52,5 @@ class Homepage extends Component {
   }
 }
 
-export default Homepage
+export default Splash
+

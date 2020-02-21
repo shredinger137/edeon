@@ -21,6 +21,7 @@ html {
 .fullBackground {
 	background-image: url("../images/bg1.jpg");
 }
+
 body {
 	background-color: black;
 	-webkit-font-smoothing: antialiased;
@@ -53,30 +54,29 @@ body {
 
 /*Projects Grid*/
 
+
 .projectsWrapper, .grid-3 {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-gap: 15px;
 	grid-auto-rows: 1fr;
 
+
 }
 
 .projectsWrapper div {
 	background-color: rgba(255,255,255,.2);
-	border-radius: 5px;
+	border-radius: 30px;
 	margin: auto;
-	height: 85%;
-	width: 85%;
+	height: 99%;
+	width: 99%;
 	
   }
 
   .projectsWrapper div:hover {
 	background-color: rgba(255,255,255,.3);
-	border-radius: 5px;
-	margin: auto;
-	height: 85%;
-	width: 85%;
-	
+
+
   }
 
 
@@ -90,6 +90,7 @@ body {
 
   .projectsWrapper p {
 	  font-size: 1rem;
+	  margin: 10px;
   }
 
 

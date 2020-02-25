@@ -53,9 +53,7 @@ Planet: 5
 
 .fullBackground {
 	background-image: url("../images/bg3.jpg");
-	min-height: 100vh;
-
-}
+	min-height: 100vh; }
 
 html {
 	overflow-y:scroll;

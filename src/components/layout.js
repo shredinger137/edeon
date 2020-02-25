@@ -20,15 +20,17 @@ const Layout = ({ children }) => {
 
   return (
     <>
+    <body className="fullBackground">
       <Header siteTitle={data.site.siteMetadata.title} />
       <SEO title="EdEon"></SEO>
-      <body className="fullBackground">
+      
       <img src={require('../images/corner_planet.png')} className="cornerPlanet"></img>
       
       <div className="contentReal" >
         <main>{children}</main>
         
       </div>
+      <br /><br />
       </body>
     </>
   )

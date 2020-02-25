@@ -17,10 +17,12 @@
 .image-map-container {
     position: relative;
     display:inline-block;
+    z-index: 3;
 
 }
 .image-map-container img {
     display:block;
+    
 }
 .image-map-container .map-selector {
     left:0;top:0;right:0;bottom:0;

@@ -7,6 +7,7 @@ export const PageTemplate = ({ title, content }) => {
   return (
     <section className="page-entry">
             <div className="section">
+              <br/>
               <h2 className="pageTitle">
                 {title}
               </h2>
@@ -15,6 +16,7 @@ export const PageTemplate = ({ title, content }) => {
                 dangerouslySetInnerHTML={{ __html: content }}
               />
             </div>
+          <br/>
     </section>
   )
 }

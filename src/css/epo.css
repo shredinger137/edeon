@@ -25,7 +25,7 @@ Planet: 5
 .twinkling{
 	z-index: 1;
 	background:transparent url('../images/twinkling.png') repeat top center;
-	animation: move-twink-back 400s linear infinite;
+	animation: move-mask-back 400s linear infinite;
 	opacity: 80%;
 }
 
@@ -36,14 +36,14 @@ Planet: 5
 	opacity: 80%;
 }
 
-@keyframes move-twink-back {
-	from {background-position:0 0;}
+@keyframes move-mask-back {
+	from {background-position:0px 0px;}
 	to {background-position:-10000px 5000px;}
 }
 
 @keyframes move-clouds-back {
-	from {background-position:0 0;}
-	to {background-position:10000px 0;}
+	from {background-position:0px 0px;}
+	to {background-position:10000px 0px;}
 }
 
 
@@ -63,7 +63,7 @@ body {
 	background-color: black;
 	-webkit-font-smoothing: antialiased;
 	margin: 0;
-	font-size: 1.2rem;
+	font-size: 1.3rem;
 	font-family: 'Calibri', sans-serif;
 	line-height: 1.2;
 	color: white;

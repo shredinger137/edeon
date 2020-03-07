@@ -74,8 +74,8 @@
 .clouds{
 	z-index: 2;
     background: url('../images/clouds.png') repeat top center;
-	/*animation: move-clouds-back 200s linear infinite;*/
-	opacity: 80%;
+	animation: move-clouds-back 200s linear infinite;
+	/*opacity: 80%;*/
 }
 
 @keyframes move-mask-back {

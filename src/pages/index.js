@@ -4,15 +4,13 @@ import ImageMapper from 'react-image-mapper';
 import { withPrefix } from "gatsby";
 import logo from '../images/logo_text_lines.png';
 
-//<div className="svg-wrapper"><Circle /></div> In case we go back to it
-
 
 class Homepage extends Component {
   constructor(){
     super();
   }
   state = {
-    width: 550
+    width: 1000
   }
 
   clicked(area){
@@ -21,9 +19,8 @@ class Homepage extends Component {
   }
 
   componentDidMount(){
-    var width = 1000;
+    var width;
     if(window && typeof window != undefined && window.innerWidth){
-      console.log(window.innerWidth);
       if(window.innerWidth <= 1100){
        width = window.innerWidth
       }

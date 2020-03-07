@@ -66,14 +66,14 @@
 
 .twinkling{
 	z-index: 1;
-	background:transparent url('../images/twinkling.png') repeat top center;
+	background: url('../images/twinkling.png') repeat top center;
 	animation: move-mask-back 400s linear infinite;
 	opacity: 80%;
 }
 
 .clouds{
 	z-index: 2;
-    background:transparent url('../images/clouds.png') repeat top center;
+    background: url('../images/clouds.png') repeat top center;
 	animation: move-clouds-back 200s linear infinite;
 	opacity: 80%;
 }

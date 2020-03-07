@@ -78,6 +78,10 @@
 	/*opacity: 80%;*/
 }
 
+.clouds {
+    opacity: 80% !important;
+}
+
 @keyframes move-mask-back {
 	from {background-position:0px 0px;}
 	to {background-position:-10000px 5000px;}

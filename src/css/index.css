@@ -68,19 +68,16 @@
 	z-index: 1;
 	background: url('../images/twinkling.png') repeat top center;
 	animation: move-mask-back 400s linear infinite;
-	opacity: 80%;
+	opacity: .8;
 }
 
 .clouds{
 	z-index: 2;
     background: url('../images/clouds.png') repeat top center;
 	animation: move-clouds-back 200s linear infinite;
-	/*opacity: 80%;*/
+	opacity: .8;
 }
 
-.clouds {
-    opacity: 80% !important;
-}
 
 @keyframes move-mask-back {
 	from {background-position:0px 0px;}

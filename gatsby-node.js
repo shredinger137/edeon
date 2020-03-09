@@ -50,6 +50,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const pageTemplate = path.resolve(`./src/templates/single-page.js`)
   const projectTemplate = path.resolve('./src/templates/single-project.js')
+  const pageTemplatePassword = path.resolve('./src/templates/single-page-password.js')
 
  
   allWordpressWpProject.edges.forEach(edge => {
@@ -65,6 +66,7 @@ exports.createPages = async ({ graphql, actions }) => {
   
 
   allWordpressPage.edges.forEach(edge => {
+    if(edge.node.slug !== "pre-service-faculty"){
     createPage({
       path: `${edge.node.slug}`,
       component: slash(pageTemplate),
@@ -72,6 +74,16 @@ exports.createPages = async ({ graphql, actions }) => {
         id: edge.node.id,
         postId: edge.node.wordpress_id,
       },
-    })
+    })} else {
+      createPage({
+        path: `${edge.node.slug}`,
+        component: slash(pageTemplatePassword),
+        context: {
+          id: edge.node.id,
+          postId: edge.node.wordpress_id,
+        },
+      })
+      
+    }
   })
 }

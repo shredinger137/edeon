@@ -50,6 +50,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const pageTemplate = path.resolve(`./src/templates/single-page.js`)
   const projectTemplate = path.resolve('./src/templates/single-project.js')
+  const allProjectTemplate = path.resolve('./src/templates/single-project.js')
   const pageTemplatePassword = path.resolve('./src/templates/single-page-password.js')
 
  
@@ -63,6 +64,12 @@ exports.createPages = async ({ graphql, actions }) => {
       },
     })
   })
+
+//    createPage({
+//      path: `allprojects`,
+//      component: slash(allProjectTemplate),
+//    })
+  
   
 
   allWordpressPage.edges.forEach(edge => {

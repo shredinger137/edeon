@@ -16,10 +16,6 @@ export const PageTemplatePassword = ({ title, content }) => {
                 {title}
               </h2>
               <Password content = {content}/>
-              <div
-                className="content"
-                dangerouslySetInnerHTML={{ __html: content }}
-              />
             </div>
           <br/>
     </section>
@@ -36,7 +32,7 @@ const Page = ({ data }) => {
 
   return (
     <Layout pageTitle={page.title}>
-      <PageTemplatePassword title={page.title} content={page.content.replace(/<img src="\//g, `<img src="https://epo.sonoma.edu/`)} />
+      <PageTemplatePassword title={page.title} content={page.content} />
     </Layout>
   )
 }

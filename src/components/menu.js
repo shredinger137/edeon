@@ -27,9 +27,11 @@ export default class Menu extends Component {
               items {
                 title
                 url
+                type
                 object_slug
                 wordpress_children {
                   title
+                  type
                   url
                   object_slug
                 }
@@ -61,18 +63,34 @@ export default class Menu extends Component {
               data.allWordpressWpApiMenusMenusItems.edges[0].node.items &&
               data.allWordpressWpApiMenusMenusItems.edges[0].node.items.map(
                 prop => {
+
                   return (
+                    
                     <li className="nav-item">
+                      {prop.type && prop.type == "custom" ? 
+                        <a href={prop.url} className="nav-link active" alt={prop.title}>{prop.title}</a> 
+                        :
                       <Link to={prop.object_slug}
                         className="nav-link active"
                         alt={prop.title}
                       >
                         {prop.title}
                       </Link>
+                      }
                       <div className="sub-menu">
                         {prop &&
                           prop.wordpress_children &&
                           prop.wordpress_children.map(child => {
+                            if(child.type && child.type == "custom"){
+                              return (
+                                <a href={child.url}
+                                  className="dropdown-item"
+                                  alt={child.title}
+                                >
+                                  {child.title}
+                                </a>
+                              )
+                            } else {
                             return (
                               <Link to={child.object_slug}
                                 className="dropdown-item"
@@ -80,7 +98,7 @@ export default class Menu extends Component {
                               >
                                 {child.title}
                               </Link>
-                            )
+                            ) }
                           })}
                       </div>
                     </li>
